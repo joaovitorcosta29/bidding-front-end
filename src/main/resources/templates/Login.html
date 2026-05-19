@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/funcionarios">Voltar</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Login</h2>
+            <form th:action="@{/salvar}" th:object="${funcionario}" method="post">
+                <label>Email:</label>
+                <input type="text" th:field="*{email}" />
+                <br /><br />
+                <label>Senha:</label>
+                <input type="text" th:field="*{senha}" />
+                <br /><br />
+                
+                <button type="submit">Salvar</button>
+            </form>
+        </main>
+    </body>
+</html>
